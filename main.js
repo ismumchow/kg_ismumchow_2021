@@ -26,4 +26,8 @@ let convertNumToString = function (arr){
     return finalArray.join(',')
 }
 
-console.log(convertNumToString(arguments))
+if(!arguments.some(isNaN)){
+    process.stdout.write(convertNumToString(arguments) + '\n')
+} else {
+    process.stdout.write('Your input contains a non-number')
+}
